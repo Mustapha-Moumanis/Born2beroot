@@ -4,8 +4,8 @@ Born2beroot
 
 What is an operating system?
 
-=> An operating system is a program that acts as an interface between the computer user and computer hardware, and controls the execution of programs. 
-=> manages all of the software and hardware on the computer. 
+* An operating system is a program that acts as an interface between the computer user and computer hardware, and controls the execution of programs. 
+* manages all of the software and hardware on the computer. 
 
 # APT : (Advanced packaging tool)
 
@@ -17,28 +17,28 @@ What is an operating system?
 # The differences between aptitude and apt :
  
 - Apt : 
-	=> apt gonna install all depends
-	=> lower-level package
+	* apt gonna install all depends
+	* lower-level package
 
 - Aptitude :
-	=> install the depended what you want
-	=> high-level package manager
+	* install the depended what you want
+	* high-level package manager
 
 # Sudo (superuser do) 
-   => Is a utility for UNIX- and Linux-based systems that provides an efficient way to give specific users permission to use specific system commands at the root (most powerful) level of the system.
+   * Is a utility for UNIX- and Linux-based systems that provides an efficient way to give specific users permission to use specific system commands at the root (most powerful) level of the system.
 
 # Append a user to secondary groups with usermod command
 sudo group :
 A group of superusers that can access the root account : 
-    cmd => usermod -a -G sudo username
+    cmd * usermod -a -G sudo username
 To create a user : 
-    cmd => useradd username
+    cmd * useradd username
 To create a group : 
-    cmd => addgroup group_name
+    cmd * addgroup group_name
 To delete a user : 
-    cmd => userdel usernameA		
+    cmd * userdel usernameA		
 To delete a user from group :	 
-    cmd => gpasswd --delete username group
+    cmd * gpasswd --delete username group
 
 
 # What is SSH ?
@@ -100,7 +100,7 @@ It is a Bourne shell script. They are used in many variations of UNIX-like opera
 
 - What Does the wall Command Do?
 
-	=> wall is short for write to all. The purpose of the command is to send a quick message to the terminals of all currently logged in users.
+	* wall is short for write to all. The purpose of the command is to send a quick message to the terminals of all currently logged in users.
 		
 - Architectures :
 	to see architectures of my operating system :
@@ -118,12 +118,12 @@ It is a Bourne shell script. They are used in many variations of UNIX-like opera
 	cmd :	grep “processor” /proc/cpuinfo | wc -l
 	
 - Memory Usage : 
-	used => free –mega | awk ‘$1 == “Mem:” {print $3}’
-	total => free –mega | awk ‘$1 == “Mem:” {print $2}’
-	percent => free –mega | awk ‘$1 == “Mem:” {printf(“%.2f”, (($3/$2)*100))}’
+	used : free –mega | awk ‘$1 == “Mem:” {print $3}’
+	total : free –mega | awk ‘$1 == “Mem:” {print $2}’
+	percent : free –mega | awk ‘$1 == “Mem:” {printf(“%.2f”, (($3/$2)*100))}’
 	
 - Disk Usage :
-	df =>  command – Shows the amount of disk space used and available on Linux file systems
+	df :  command – Shows the amount of disk space used and available on Linux file systems
 	
 - last boot : 
 	cmd  :	who -b | awk ‘ {print $3 “ “ $4}’	
