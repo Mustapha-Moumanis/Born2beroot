@@ -54,9 +54,9 @@ To delete a user from group :
 
 - TCP (Transmission Control Protocol)
 
-     => Is one of the main protocols of the Internet protocol suite. 
-     => It lies between the Application and Network Layers which are used in providing reliable delivery services.
-     => Unicast connection, is one to one transmission from one point in the network to another point “(one sender and one receiver)
+     * Is one of the main protocols of the Internet protocol suite. 
+     * It lies between the Application and Network Layers which are used in providing reliable delivery services.
+     * Unicast connection, is one to one transmission from one point in the network to another point “(one sender and one receiver)
      
 - UDP (User Datagram Protocol) that have multiple(one sender and multiple receivers)
 - podcast(one sender and all receivers) connection.
@@ -69,15 +69,15 @@ To delete a user from group :
 
 - cmd :
 
-=> Know UFW is active or not :
+* Know UFW is active or not :
 	ufw status
-=> Active UFW :  
+* Active UFW :  
 	ufw enable
-=> inactive UFW : 
+* inactive UFW : 
 	ufw disable
-=> to add a rule : 
+* to add a rule : 
 	sudo ufw allow “rule”
-=> to delete a rule :
+* to delete a rule :
 	sudo ufw status numbered
 	sudo ufw delete “number”
 
