@@ -1,8 +1,7 @@
 # Born2beroot
 Born2beroot (42cursus). This project aims to introduce you to the wonderful world of virtualization.
-Born2beroot
 
-What is an operating system?
+# What is an operating system?
 
 * An operating system is a program that acts as an interface between the computer user and computer hardware, and controls the execution of programs. 
 * manages all of the software and hardware on the computer. 
@@ -158,11 +157,11 @@ It is a Bourne shell script. They are used in many variations of UNIX-like opera
 
 # Cron :
 
-Example of job definition :
- .---------------- minute (0 - 59)
- |  .------------- hour (0 - 23)
- |  |  .---------- day of month (1 - 31)
- |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
- |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR  sun,mon,tue,wed,thu,fri,sat
- |  |  |  |  |
- *  *  *  *  * user-name  command to be executed
+- Example of job definition :
+-  .---------------- minute (0 - 59)
+-  |  .------------- hour (0 - 23)
+-  |  |  .---------- day of month (1 - 31)
+-  |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+-  |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR  sun,mon,tue,wed,thu,fri,sat
+-  |  |  |  |  |
+-  *  *  *  *  * user-name  command to be executed
