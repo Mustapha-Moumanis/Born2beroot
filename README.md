@@ -29,15 +29,15 @@ Born2beroot (42cursus). This project aims to introduce you to the wonderful worl
 # Append a user to secondary groups with usermod command
 sudo group :
 A group of superusers that can access the root account : 
-    cmd * usermod -a -G sudo username
+    ```usermod -a -G sudo username```
 To create a user : 
-    cmd * useradd username
+    ```useradd username```
 To create a group : 
     ```addgroup group_name```
 To delete a user : 
-    cmd * userdel usernameA		
+    ```userdel usernameA```		
 To delete a user from group :	 
-    cmd * gpasswd --delete username group
+    ```gpasswd --delete username group```
 
 
 # What is SSH ?
@@ -70,27 +70,27 @@ To delete a user from group :
 - cmd :
 
 * Know UFW is active or not :
-	ufw status
+	```ufw status```
 * Active UFW :  
-	ufw enable
+	```ufw enable```
 * inactive UFW : 
-	ufw disable
+	```ufw disable```
 * to add a rule : 
-	sudo ufw allow “rule”
+	```sudo ufw allow “rule”```
 * to delete a rule :
-	sudo ufw status numbered
-	sudo ufw delete “number”
+	```sudo ufw status numbered
+	sudo ufw delete “number”```
 
 # how to change hostname ?
-
+```
 sudo nano /etc/hostname
 sudo nano /etc/hosts
 sudo reboot
-
+```
 # Setting up the sudo policies
-
+```
 /etc/sudoers.d/sudo_config
-
+```
 # What is a file with extension .sh?
 
 It is a Bourne shell script. They are used in many variations of UNIX-like operating systems. They have no "language" and are interpreted by your shell (interpreter of terminal commands)
@@ -103,60 +103,60 @@ It is a Bourne shell script. They are used in many variations of UNIX-like opera
 		
 - Architectures :
 	to see architectures of my operating system :
-	cmd :	“uname -a”
+	```	“uname -a”
 		“a” means all
 		“uname” print certain system information.
-
+	```
 - User log :
-	cmd : 	who | cut -d " " -f 1 | sort -u | wc -l
+	``` who | cut -d " " -f 1 | sort -u | wc -l ```
 
 - The number of physical processors :
-	cmd :	grep “physical id” /proc/cpuinfo | wc -l
+	``` grep “physical id” /proc/cpuinfo | wc -l ```
 
 - The number of virtual processors : 
-	cmd :	grep “processor” /proc/cpuinfo | wc -l
+	``` grep “processor” /proc/cpuinfo | wc -l ```
 	
 - Memory Usage : 
-	used : free –mega | awk ‘$1 == “Mem:” {print $3}’
-	total : free –mega | awk ‘$1 == “Mem:” {print $2}’
-	percent : free –mega | awk ‘$1 == “Mem:” {printf(“%.2f”, (($3/$2)*100))}’
+	```used : free –mega | awk ‘$1 == “Mem:” {print $3}’```
+	```total : free –mega | awk ‘$1 == “Mem:” {print $2}’```
+	```percent : free –mega | awk ‘$1 == “Mem:” {printf(“%.2f”, (($3/$2)*100))}’```
 	
 - Disk Usage :
 	df :  command – Shows the amount of disk space used and available on Linux file systems
 	
 - last boot : 
-	cmd  :	who -b | awk ‘ {print $3 “ “ $4}’	
+	cmd  :	```who -b | awk ‘ {print $3 “ “ $4}’	```
 	who  :	show who is logged on.
 	-b   :	time of last system boot
 	
 - Whether LVM is active or not : 
-	cmd  :	lsblk | grep lvm | wc -l | awk ‘{if (($1) != 0) {print “yes”} else {print “no”}}’
+	cmd  :	```lsblk | grep lvm | wc -l | awk ‘{if (($1) != 0) {print “yes”} else {print “no”}}’```
 
 - sudo : 
-	cmd :	sudo grep -a “sudo “ /var/log/auth.log | wc -l
-	cmd :	grep "sudo" /var/log/auth.log | grep COMMAND | wc -l
+	cmd :	```sudo grep -a “sudo “ /var/log/auth.log | wc -l```
+	cmd :	```grep "sudo" /var/log/auth.log | grep COMMAND | wc -l```
 
 - Connection TCP : 
-	cmd : 	ss -ta | grep ESTAB | wc -l
+	cmd : 	```ss -ta | grep ESTAB | wc -l```
 	ss : command used to show network statistics
 	-ta : -a and -t with the ss command to output a list of all the TCP connections.
 	ss -ta : dumps all TCP socket
 
 - Network : 
-	cmd : 	IP $(hostname -I) $(ip link | grep "link/ether" | awk '{print $2}') 
+	cmd : 	```IP $(hostname -I) $(ip link | grep "link/ether" | awk '{print $2}') ```
 	ip link : Show information for all interfaces.
 
 - CPU load : 
-	cmd :	$(vmstat 1 2 | tail -1 | awk '{printf("%.1f%%\n", 100-$15)}')
+	cmd :	```$(vmstat 1 2 | tail -1 | awk '{printf("%.1f%%\n", 100-$15)}')```
 
 # not be possible to connect using SSH as root :
 
-	cmd vim /etc/ssh/sshd_config
+	cmd ```vim /etc/ssh/sshd_config```
 	change this : PermitRootLogin prohibit-password
 	to : PermitRootLogin no
 
 # Cron :
-
+```
 - Example of job definition :
 -  .---------------- minute (0 - 59)
 -  |  .------------- hour (0 - 23)
@@ -165,3 +165,4 @@ It is a Bourne shell script. They are used in many variations of UNIX-like opera
 -  |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR  sun,mon,tue,wed,thu,fri,sat
 -  |  |  |  |  |
 -  \*  \*  \*  \*  \* user-name  command to be executed
+```
