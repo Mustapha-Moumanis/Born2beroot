@@ -33,7 +33,7 @@ A group of superusers that can access the root account :
 To create a user : 
     cmd * useradd username
 To create a group : 
-    cmd * addgroup group_name
+    ```addgroup group_name```
 To delete a user : 
     cmd * userdel usernameA		
 To delete a user from group :	 
