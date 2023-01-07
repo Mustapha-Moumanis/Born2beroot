@@ -78,8 +78,10 @@ To delete a user from group :
 * to add a rule : 
 	```sudo ufw allow “rule”```
 * to delete a rule :
-	```sudo ufw status numbered
-	sudo ufw delete “number”```
+	```
+	sudo ufw status numbered
+	sudo ufw delete >number<
+	```
 
 # how to change hostname ?
 ```
